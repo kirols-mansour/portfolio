@@ -1,0 +1,9 @@
+Developed a test box (Hardware in The Loop) with Linux operation system and a touch screen, for automatic testing for complex systems.
+
+The development of the test box includes:
+- Designing of the hardware interface schematics.
+- Development of the PCBs for the hardware interface between the control board and the middleware hardware.
+- Development of the front-end and back-end of User Interface Software.
+- Using the software on Raspberry Pi Linux system.
+- Designing of the 3D printed case for the box.
+- Integration with DevOps pipelines for Automatic testing.

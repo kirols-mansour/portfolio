@@ -1,0 +1,9 @@
+Complete designing of professional coffee machines electronic boards (PCBs).
+
+My experience in the PCB designing includes:
+- The development of the schematic in order to respect the requirements.
+- Design of the PCB and positioning of the components.
+- Wiring the PCB layers and developing the Electric and Mechanical constrains.
+- Generating the production files for the PCB.
+- Prototyping and testing the PCBs.
+- Refining the design and generation the final production files.

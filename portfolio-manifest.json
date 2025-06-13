@@ -1,0 +1,101 @@
+{
+  "embedded": {
+    "title": "Embedded Software Development",
+    "description": "Advanced firmware solutions for industrial applications and IoT devices, delivering robust and scalable embedded systems",
+    "images": [
+      {
+        "src": "Images&videos/Embedded Software Development/dsPIC33 of Motor Control drivers.png",
+        "alt": "Dspic33 Of Motor Control Drivers",
+        "description": "dsPIC33 Motor Control drivers for high-performance applications"
+      },
+      {
+        "src": "Images&videos/Embedded Software Development/Extensive experience with various microcontroller families applied across a range of commercial products.png",
+        "alt": "Extensive Experience With Various Microcontroller Families Applied Across A Range Of Commercial Products",
+        "description": "Extensive experience with various microcontroller families across commercial products"
+      },
+      {
+        "src": "Images&videos/Embedded Software Development/nRF52 microcontrollers with LumenRadio Mira Modules for wireless temperature and humidity sensors and remote controls.jpg",
+        "alt": "Nrf52 Microcontrollers With Lumenradio Mira Modules For Wireless Temperature And Humidity Sensors And Remote Controls",
+        "description": "nRF52 microcontrollers with LumenRadio Mira Modules for wireless sensors and remote controls"
+      },
+      {
+        "src": "Images&videos/Embedded Software Development/STM32 and AVR microcontrollers for one of the world's most renowned coffee machines company.png",
+        "alt": "Stm32 And Avr Microcontrollers For One Of The World'S Most Renowned Coffee Machines Company",
+        "description": "STM32 and AVR microcontrollers for world's most renowned coffee machines company"
+      },
+      {
+        "src": "Images&videos/Embedded Software Development/STM32 microcontrollers for embedded systems, specifically in Munters dehumidifiers across a diverse range of sizes.png",
+        "alt": "Stm32 Microcontrollers For Embedded Systems, Specifically In Munters Dehumidifiers Across A Diverse Range Of Sizes",
+        "description": "STM32 microcontrollers for Munters dehumidifiers across diverse range of sizes"
+      }
+    ]
+  },
+  "pcb": {
+    "title": "Professional PCB Design",
+    "description": "High-complexity PCB solutions from concept to production, serving global industry leaders and cutting-edge applications",
+    "images": [
+      {
+        "src": "Images&videos/PCB designing/Board design for a complex coffee machine PCB.mp4",
+        "alt": "Board Design For A Complex Coffee Machine Pcb",
+        "description": "Board design process for complex coffee machine PCB"
+      },
+      {
+        "src": "Images&videos/PCB designing/Control board for 4 groups coffee machine. This PCB includes 4 layers, SMD on both sides, PTH on one side. Total of 470 components.png",
+        "alt": "Control Board For 4 Groups Coffee Machine. This Pcb Includes 4 Layers, Smd On Both Sides, Pth On One Side. Total Of 470 Components",
+        "description": "Control board for 4 groups coffee machine - 4 layers, SMD on both sides, PTH on one side, 470 components total"
+      },
+      {
+        "src": "Images&videos/PCB designing/Dashboard PCB design to control a stepper motor and RGB LEDs for coffee machines.png",
+        "alt": "Dashboard Pcb Design To Control A Stepper Motor And Rgb Leds For Coffee Machines",
+        "description": "Dashboard PCB design to control stepper motor and RGB LEDs for coffee machines"
+      },
+      {
+        "src": "Images&videos/PCB designing/High power motor control board. This Board supports Field-Oriented-Control (FOC) algorithm with Power-Factor-Corrector (PFC).jpg",
+        "alt": "High Power Motor Control Board. This Board Supports Field Oriented Control (Foc) Algorithm With Power Factor Corrector (Pfc)",
+        "description": "High power motor control board supporting Field-Oriented-Control (FOC) and Power-Factor-Corrector (PFC)"
+      },
+      {
+        "src": "Images&videos/PCB designing/NFC board for high technology coffee machines with AI system for system recognition.png",
+        "alt": "Nfc Board For High Technology Coffee Machines With Ai System For System Recognition",
+        "description": "NFC board for high technology coffee machines with AI system recognition"
+      },
+      {
+        "src": "Images&videos/PCB designing/PCB for low cost coffee machines attached directly to the machine heater to save space.png",
+        "alt": "Pcb For Low Cost Coffee Machines Attached Directly To The Machine Heater To Save Space",
+        "description": "PCB for low cost coffee machines attached directly to machine heater to save space"
+      }
+    ]
+  },
+  "gui": {
+    "title": "Industrial GUI & HMI Solutions",
+    "description": "Professional graphical user interface development for industrial applications",
+    "images": [
+      {
+        "src": "Images&videos/Graphical User Interface Software/Developed a GUI application by LabVIEW, for coffee machine services and production factories worldwide..png",
+        "alt": "Developed A Gui Application By Labview, For Coffee Machine Services And Production Factories Worldwide.",
+        "description": "LabVIEW GUI application for coffee machine services and production factories worldwide"
+      },
+      {
+        "src": "Images&videos/Graphical User Interface Software/PyQT5 application for test box machine simulator.png",
+        "alt": "Pyqt5 Application For Test Box Machine Simulator",
+        "description": "PyQT5 application for test box machine simulator with intuitive interface"
+      }
+    ]
+  },
+  "testbox": {
+    "title": "Hardware-in-the-Loop Testing",
+    "description": "Complete test automation systems for complex HVAC applications, enabling comprehensive validation and quality assurance",
+    "images": [
+      {
+        "src": "Images&videos/Test box for systems simulation/3D model for the case.png",
+        "alt": "3D Model For The Case",
+        "description": "3D model design for the test box case with precision engineering"
+      },
+      {
+        "src": "Images&videos/Test box for systems simulation/Complete test box for complex humidification and dehumidification systems.jpg",
+        "alt": "Complete Test Box For Complex Humidification And Dehumidification Systems",
+        "description": "Complete test box for complex humidification and dehumidification systems"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kirols-mansour.github.io/sitemap.xml
+
+# Block access to private files
+Disallow: /check_manifest.py
+Disallow: /start_server.py
+Disallow: /update_portfolio_manifest.py
+Disallow: /*.py$

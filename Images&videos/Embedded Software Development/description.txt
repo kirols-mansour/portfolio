@@ -1,0 +1,8 @@
+Embedded Firmware Development for different projects with different companies.
+These projects were mainly oriented for:
+- STM32
+- ESP32
+- dsPIC33
+- nRF52 series
+- ATMEL AVR
+- Microchip PIC
