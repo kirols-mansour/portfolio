@@ -605,98 +605,177 @@ video.carousel-image.active {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1050; 
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dimmed background */
-    /* For centering modal-content if JS sets display: flex */
-    align-items: center;
-    justify-content: center;
-    padding: 1rem; /* Add some padding for very small screens */
-    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
     background-color: var(--background-white);
-    padding: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-large);
-    position: relative; /* For positioning within the flex container (.modal) */
-    width: 90vw; /* Use 90% of viewport width */
-    max-width: 500px; /* Maximum width on smaller screens */
-    max-height: 85vh; /* Use 85% of viewport height */
-    overflow-y: auto; /* Enable vertical scrolling if content is taller */
-    display: flex;
-    flex-direction: column;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideInFromTop 0.3s ease;
 }
 
-/* Optional: Basic styling for a modal header, if you have one */
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 1rem;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-}
-
-/* Optional: Styling for a close button, assuming a class like .modal-close-btn */
-.modal-close-btn {
-    font-size: 1.75rem;
-    font-weight: bold;
+.close {
     color: var(--text-secondary);
-    background: none;
-    border: none;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
     cursor: pointer;
-    padding: 0.5rem;
-    line-height: 1;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
 }
 
-.modal-close-btn:hover {
+.close:hover {
     color: var(--primary-color);
 }
 
-/* Desktop and larger screen adjustments for modal */
-@media (min-width: 768px) {
-    .modal-content {
-        width: 70vw;
-        max-width: 800px; /* Allow wider modal on desktop */
-        padding: 30px;
-    }
-
-    .modal-header h2 {
-        font-size: 1.75rem;
-    }
+.modal-body h2 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
-/* Mobile Font Color Fixes */
-@media (max-width: 768px) {
-  /* Ensure text in main content sections (not the hero) is readable */
-  section:not(.hero) p,
-  section:not(.hero) li {
-    color: var(--text-secondary); /* Default to secondary text color */
-  }
+.modal-body p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
 
-  section:not(.hero) h1,
-  section:not(.hero) h2,
-  section:not(.hero) h3,
-  section:not(.hero) h4,
-  section:not(.hero) h5,
-  section:not(.hero) h6 {
-    color: var(--text-primary); /* Default to primary text color for headings */
-  }
+.modal-body ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
 
-  /* If you have specific elements that are still problematic, target them here, e.g.: */
-  /* .some-specific-class-on-mobile { color: var(--text-primary) !important; } */
+.modal-body li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Modal Images Gallery - For scrollable full images */
+.modal-images-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.modal-image-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.modal-image-item img,
+.modal-image-item video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+    border-radius: 0.5rem !important;
+    box-shadow: var(--shadow-medium) !important;
+    background: white !important;
+    transition: opacity 0.3s ease !important;
+    border: 1px solid var(--border-color) !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    min-height: 100px !important;
+}
+
+/* Ensure images without src are hidden, but valid images are shown */
+.modal-image-item img[src=""],
+.modal-image-item img:not([src]) {
+    display: none !important;
+}
+
+/* Remove conflicting styles that might cause gray appearance */
+
+.modal-image-item img[alt]::after {
+    content: "Loading: " attr(alt);
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.modal-image-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Scrollbar styling for modal gallery */
+.modal-images-gallery::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-images-gallery::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 4px;
+}
+
+.modal-images-gallery::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+
+.modal-images-gallery::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
 }
 
 /* Animations */
@@ -765,12 +844,22 @@ video.carousel-image.active {
         --text-primary: #f9fafb;
         --background-white: #1f2937;
         --text-secondary: #d1d5db;
+        --background-light: #1f2937; /* Dark background for sections using background-light */
     }
     
     body {
         background: #1f2937;
         color: #f9fafb;
     }
+}
+
+/* Dark mode on mobile: ensure text-secondary matches text-primary for readability */
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+    :root { --text-secondary: var(--text-primary); }
+}
+
+@media screen and (max-width: 480px) and (prefers-color-scheme: dark) {
+    :root { --text-secondary: var(--text-primary); }
 }
 
 /* Lazy loading placeholder */
@@ -799,6 +888,8 @@ img.lazy.loaded {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    /* Darken secondary text on mobile for better readability */
+    :root { --text-secondary: var(--text-primary); }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -895,12 +986,17 @@ img.lazy.loaded {
     }
 
     .modal-content {
-        margin: 10% auto;
+        margin: 5% auto;
         width: 95%;
+        max-width: 95%;
+        max-height: 90vh; /* Constrain modal height to viewport */
+        overflow-y: auto;
     }
 }
 
 @media screen and (max-width: 480px) {
+    /* Ensure text-secondary is dark on very small screens */
+    :root { --text-secondary: var(--text-primary); }
     .hero-title {
         font-size: 2rem;
     }
@@ -953,6 +1049,17 @@ img.lazy.loaded {
     .value-props {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    /* Full-screen modal on small devices */
+    .modal-content {
+        width: 100% !important;
+        max-width: none !important;
+        height: 100% !important;
+        max-height: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding: 1rem !important;
     }
 }
 
@@ -1957,6 +2064,7 @@ img.lazy.loaded {
         background: var(--gradient-secondary);
     }
     100% {
+        width: 100%;
         background: var(--gradient-primary);
     }
 }
