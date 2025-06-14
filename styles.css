@@ -2239,3 +2239,36 @@ img.lazy.loaded {
         padding-right: 0.5rem;
     }
 }
+
+/* Mobile specific overrides */
+@media screen and (max-width: 768px) {
+    /* Force dark text in all main sections on mobile for readability */
+    #about, #portfolio, #experience, #education, #skills-visual, #expertise, #contact, footer {
+        color: var(--text-primary) !important;
+    }
+    #about p, .section-header p, .portfolio-info h3, .portfolio-info p,
+    .expertise-card h3, .expertise-card li, .achievement span,
+    .timeline-content p, .timeline-content li,
+    .education-card h3, .education-card span,
+    .contact-details h3, .contact-details p, .contact-link {
+        color: var(--text-primary) !important;
+    }
+    .btn-secondary {
+        color: var(--text-primary) !important;
+        border-color: var(--text-primary) !important;
+    }
+    .btn-secondary:hover {
+        background: var(--primary-color) !important;
+        color: white !important;
+    }
+    /* Constrain modal size to viewport on mobile */
+    .modal-content {
+        margin: 5% auto !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
+        max-height: 90vh !important;
+        border-radius: 0.5rem !important;
+        overflow-y: auto !important;
+        padding: 1rem !important;
+    }
+}
