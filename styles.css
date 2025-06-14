@@ -658,10 +658,13 @@ video.carousel-image.active {
     border-radius: 1rem;
     width: 90%;
     max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
+    max-height: 85vh; /* Slightly higher to give more room for content */
+    overflow-y: auto; /* Single scrollbar for entire modal */
     position: relative;
     animation: slideInFromTop 0.3s ease;
+    /* Improve scrollbar appearance */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--background-light);
 }
 
 .close {
@@ -722,9 +725,8 @@ video.carousel-image.active {
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
-    max-height: 50vh;
-    overflow-y: auto;
-    padding-right: 1rem;
+    /* Remove max-height and overflow properties to eliminate the second scrollbar */
+    padding-right: 0.5rem;
 }
 
 .modal-image-item {
@@ -734,13 +736,14 @@ video.carousel-image.active {
     background: var(--background-light);
     padding: 1.5rem;
     border-radius: 0.5rem;
+    margin-bottom: 0.5rem; /* Add some spacing between items */
 }
 
 .modal-image-item img,
 .modal-image-item video {
     width: 100% !important;
     height: auto !important;
-    max-height: 400px !important;
+    max-height: 500px !important; /* Allow slightly larger images in the unified scroll view */
     object-fit: contain !important;
     border-radius: 0.5rem !important;
     box-shadow: var(--shadow-medium) !important;
@@ -796,6 +799,21 @@ video.carousel-image.active {
 
 .modal-images-gallery::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
+}
+
+/* Custom scrollbar for modal content */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 8px;
 }
 
 /* Animations */
@@ -1003,14 +1021,13 @@ img.lazy.loaded {
 
     .container {
         padding: 0 1rem;
-    }
-
-    .modal-content {
-        margin: 5% auto;
+    }    .modal-content {
+        margin: 2% auto; /* Reduced top margin for more content space */
         width: 95%;
         max-width: 95%;
-        max-height: 90vh; /* Constrain modal height to viewport */
+        max-height: 95vh; /* Larger height on mobile for better viewing */
         overflow-y: auto;
+        padding: 1.5rem; /* Slightly reduced padding */
     }
 }
 
