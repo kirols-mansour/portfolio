@@ -256,11 +256,26 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    position: relative;
+    z-index: 2;
 }
 
 .section-header p {
-    font-size: 1.25rem;
+    margin-top: 0.5rem;
     color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Add these properties for better contrast */
+    position: relative;
+    z-index: 2;
+}
+
+/* Add a slight text shadow for better readability when text is on varied backgrounds */
+.section-header p, 
+.portfolio-subtitle {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Portfolio section specific styling */
@@ -599,6 +614,11 @@ video.carousel-image.active {
 
 .footer-links a:hover {
     color: white;
+}
+
+.footer-text p {
+    color: #ffffff;
+    font-size: 0.95rem;
 }
 
 /* Modals */
@@ -995,8 +1015,25 @@ img.lazy.loaded {
 }
 
 @media screen and (max-width: 480px) {
-    /* Ensure text-secondary is dark on very small screens */
-    :root { --text-secondary: var(--text-primary); }
+    /* Improve text contrast on small screens */
+    .section-header p {
+        color: #ffffff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+    }
+    
+    .footer-text p {
+        color: #ffffff;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .portfolio-subtitle {
+        color: #ffffff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
@@ -1745,12 +1782,11 @@ img.lazy.loaded {
 }
 
 .portfolio-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #ffffff; /* White color for better contrast */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Enhanced shadow for readability */
 }
 
 .portfolio-stats {
@@ -2270,5 +2306,31 @@ img.lazy.loaded {
         border-radius: 0.5rem !important;
         overflow-y: auto !important;
         padding: 1rem !important;
+    }
+}
+
+/* Enhanced text readability across all sections */
+.section-header h2 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure text in sections is always readable */
+section p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Add a subtle container background for text when needed */
+@media screen and (max-width: 768px) {
+    .section-header {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .section-header p {
+        color: #ffffff;
     }
 }
