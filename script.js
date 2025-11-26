@@ -198,15 +198,21 @@ function loadHardcodedPortfolio() {
         testbox: {
             title: "Hardware-in-the-Loop Testing",
             description: "Complete test automation systems for complex HVAC applications, enabling comprehensive validation and quality assurance",
-            images: [                {
-                    src: "Images&videos/Test box for systems simulation/3D model for the case.png",
-                    alt: "3D Model For The Case",
-                    description: "3D model design for the test box case with precision engineering"
+            images: [
+                {
+                    src: "Images&videos/Test box for systems simulation/Hardware-in-The_Loop integrated with CI-CD pipelines to ensure continuous validation and robust system performance.jpg",
+                    alt: "Hardware In The Loop Integrated With Ci Cd Pipelines To Ensure Continuous Validation And Robust System Performance",
+                    description: "Hardware in The Loop integrated with CI CD pipelines to ensure continuous validation and robust system performance"
                 },
                 {
-                    src: "Images&videos/Test box for systems simulation/Complete test box for complex humidification and dehumidification systems.jpg",
-                    alt: "Complete Test Box",
-                    description: "Complete test box for complex humidification and dehumidification systems"
+                    src: "Images&videos/Test box for systems simulation/Test box for complex humidification and dehumidification systems.jpg",
+                    alt: "Test Box For Complex Humidification And Dehumidification Systems",
+                    description: "Test box for complex humidification and dehumidification systems"
+                },
+                {
+                    src: "Images&videos/Test box for systems simulation/Test box mechanical 3D model for the case.png",
+                    alt: "Test Box Mechanical 3D Model For The Case",
+                    description: "Test box mechanical 3D model for the case"
                 }
             ]
         }
